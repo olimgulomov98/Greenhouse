@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/greenshop-api/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/greenshop-api/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/greenshop-api",
+  "projects": {
+    "greenshop-api": {
+      "type": "application",
+      "root": "apps/greenshop-api",
+      "entryFile": "main",
+      "sourceRoot": "apps/greenshop-api/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/greenshop-api/tsconfig.app.json"
+      }
+    },
+    "greenshop-batch": {
+      "type": "application",
+      "root": "apps/greenshop-batch",
+      "entryFile": "main",
+      "sourceRoot": "apps/greenshop-batch/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/greenshop-batch/tsconfig.app.json"
+      }
+    }
+  }
+}
